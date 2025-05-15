@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Logo from './components/Logo';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Hero from './pages/Hero';
+
 import './App.css'
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-3xl font-bold text--600">Hello from Tailwind!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Hero/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
